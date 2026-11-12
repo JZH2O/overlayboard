@@ -1,0 +1,11 @@
+# Xcode / build artifacts
+build/
+DerivedData/
+*.ipa
+*.xcarchive
+OverlayBoard-project.zip
+*.app
+
+# OS / editor
+.DS_Store
+*.swp

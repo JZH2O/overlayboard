@@ -1,0 +1,28 @@
+# 用 XcodeGen 一键生成 Xcode 工程：
+#   brew install xcodegen
+#   xcodegen generate
+# 然后 open OverlayBoard.xcodeproj
+name: OverlayBoard
+options:
+  bundleIdPrefix: com.yourorg
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+targets:
+  OverlayBoard:
+    type: application
+    platform: iOS
+    sources:
+      - path: OverlayBoard
+    info:
+      path: OverlayBoard/Resources/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourorg.overlayboard
+        CODE_SIGN_ENTITLEMENTS: OverlayBoard/OverlayBoard.entitlements
+        TARGETED_DEVICE_FAMILY: "2"          # 仅 iPad
+        SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: "NO"
+        INFOPLIST_FILE: OverlayBoard/Resources/Info.plist
+        DEVELOPMENT_TEAM: ""                 # 填入你的 Team ID
