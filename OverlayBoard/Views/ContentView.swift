@@ -42,7 +42,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 16) {
                 Text("参考文献草稿")
                     .font(.largeTitle.bold())
-                Text("这是被画板覆盖的"其他 App"内容。把画板窗口拖到文字上方，即可看到透明叠加效果：只显示你的笔迹，背景文字依然可见。在 iPad 上，从左/右边缘调出 Dock，把本 App 拖成 Slide Over 浮窗，就能贴在 Safari、备忘录、PDF 等任何 App 旁边作画。")
+                Text("这是被画板覆盖的“其他 App”内容。把画板窗口拖到文字上方，即可看到透明叠加效果：只显示你的笔迹，背景文字依然可见。在 iPad 上，从左/右边缘调出 Dock，把本 App 拖成 Slide Over 浮窗，就能贴在 Safari、备忘录、PDF 等任何 App 旁边作画。")
                     .foregroundStyle(.secondary)
                 ForEach(0..<12) { i in
                     VStack(alignment: .leading, spacing: 6) {
