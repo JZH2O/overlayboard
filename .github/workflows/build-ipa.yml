@@ -36,8 +36,8 @@ jobs:
 
       - name: Package unsigned IPA
         run: |
-          APP=$(find ~/Library/Developer/Xcode/DerivedData \
-                  -path '*/Release-iphoneos/OverlayBoard.app' -type d | head -1)
+          # xcodebuild 命令行默认把产物输出到仓库内的 build/ 目录
+          APP=$(find . -path '*/Release-iphoneos/OverlayBoard.app' -type d | head -1)
           echo "Found app: $APP"
           [ -d "$APP" ] || { echo "❌ 未找到 OverlayBoard.app，构建可能失败"; exit 1; }
           mkdir -p build/Payload
